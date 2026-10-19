@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="기술, 경제, 사회, 과학, 문화와 일상의 변화를 근거와 맥락으로 연결해 읽는 Chance_Blog입니다.">
+  <meta name="theme-color" content="#08111f">
+  <link rel="canonical" href="https://shine88pc.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Chance_Blog">
+  <meta property="og:title" content="Chance_Blog — 여러 분야를 잇는 관점 노트">
+  <meta property="og:description" content="확인 가능한 출처에서 출발해 기술, 경제, 사회, 과학, 문화와 일상을 연결합니다.">
+  <meta property="og:url" content="https://shine88pc.github.io/">
+  <title>Chance_Blog — 여러 분야를 잇는 관점 노트</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #080d18; color: #edf3ff; font-synthesis: none; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-width: 320px; background: radial-gradient(ellipse at 80% 0%, #172951 0, transparent 36rem), #080d18; }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    header { border-bottom: 1px solid #ffffff16; }
+    .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { text-decoration: none; font-weight: 850; letter-spacing: -.04em; font-size: 1.25rem; }
+    .brand b { color: #78a8ff; }
+    .navlinks { display: flex; gap: 22px; color: #a9b8d2; font-size: .9rem; }
+    .navlinks a { text-decoration: none; }
+    .navlinks a:hover, .text-link:hover { color: #9dc1ff; }
+    main { padding-bottom: 72px; }
+    .hero { padding: clamp(68px, 10vw, 118px) 0 66px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #b7d2ff; border: 1px solid #78a8ff40; background: #23437738; padding: 9px 13px; border-radius: 999px; font-size: .75rem; letter-spacing: .09em; text-transform: uppercase; }
+    h1 { max-width: 850px; margin: 24px 0 17px; font-size: clamp(2.5rem, 7vw, 5.3rem); line-height: 1.1; letter-spacing: -.065em; }
+    h1 span { color: #8bb6ff; }
+    .lead { max-width: 700px; color: #b3bfd3; line-height: 1.9; font-size: clamp(1rem, 2vw, 1.18rem); }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .button { display: inline-flex; align-items: center; gap: 10px; padding: 13px 18px; border-radius: 12px; background: #3978ed; text-decoration: none; font-weight: 750; box-shadow: 0 12px 36px #1749a333; }
+    .button:hover { background: #5590ff; }
+    .button.secondary { background: #ffffff0b; border: 1px solid #ffffff20; box-shadow: none; color: #d8e5fb; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin: 0 0 18px; }
+    h2 { margin: 0; letter-spacing: -.035em; font-size: 1.45rem; }
+    .muted { color: #8d9bb2; line-height: 1.7; }
+    .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 0 0 64px; }
+    .principle, .post { border: 1px solid #ffffff14; border-radius: 18px; background: linear-gradient(145deg, #121d32e8, #0d1423e8); }
+    .principle { padding: 22px; }
+    .number { color: #8bb6ff; font: 700 .75rem ui-monospace, monospace; letter-spacing: .12em; }
+    .principle h3 { margin: 14px 0 8px; font-size: 1rem; }
+    .principle p { margin: 0; font-size: .9rem; line-height: 1.75; color: #a6b3c9; }
+    .latest { padding-top: 8px; }
+    .text-link { color: #8bb6ff; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    .posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .post { min-height: 205px; padding: 21px; display: flex; flex-direction: column; text-decoration: none; transition: transform .18s ease, border-color .18s ease; }
+    .post:hover { transform: translateY(-3px); border-color: #78a8ff70; }
+    .post-meta { color: #91a7c8; font-size: .75rem; }
+    .post h3 { margin: 15px 0 10px; font-size: 1.03rem; line-height: 1.55; }
+    .post p { margin: 0; color: #a6b3c9; font-size: .86rem; line-height: 1.7; }
+    .status { min-height: 26px; margin: 16px 0 0; color: #8795aa; font-size: .82rem; }
+    .empty { color: #b3bfd3; padding: 22px; border: 1px dashed #ffffff2b; border-radius: 16px; }
+    footer { border-top: 1px solid #ffffff16; color: #8795aa; font-size: .82rem; padding: 24px 0 34px; }
+    .foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+    .footlinks { display: flex; gap: 18px; }
+    .footlinks a { text-underline-offset: 3px; }
+    @media (max-width: 760px) { .principles, .posts { grid-template-columns: 1fr; } .navlinks { gap: 12px; font-size: .8rem; } .hero { padding-top: 64px; } .section-head { align-items: start; flex-direction: column; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+  </style>
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebSite","name":"Chance_Blog","url":"https://shine88pc.github.io/","inLanguage":["ko","en"],"description":"기술, 경제, 사회, 과학, 문화와 일상의 변화를 근거와 맥락으로 연결해 읽는 교양 매거진"}
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="wrap nav" aria-label="주 메뉴">
+      <a class="brand" href="/" aria-label="Chance_Blog 홈">⚡ Chance_<b>Blog</b></a>
+      <div class="navlinks"><a href="/chanceblog/">블로그</a><a href="/chanceblog/about/">편집 원칙</a><a href="/chanceblog/privacy/">개인정보</a></div>
+    </nav>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <span class="eyebrow"><span aria-hidden="true">✦</span> Ideas across fields</span>
+      <h1 id="hero-title">세상은 한 분야로만<br><span>움직이지 않으니까.</span></h1>
+      <p class="lead">기술·경제·사회·과학·문화와 일상에서 일어나는 변화를 출처와 맥락으로 읽습니다. 확인된 사실과 아직 모르는 것을 나누고, 한 가지 소식이 우리 삶에 닿는 지점을 살펴봅니다.</p>
+      <div class="actions"><a class="button" href="/chanceblog/">글과 주제 둘러보기 <span aria-hidden="true">→</span></a><a class="button secondary" href="/chanceblog/about/">출처·편집 기준 보기</a></div>
+    </section>
+    <section class="principles" aria-label="편집 원칙">
+      <article class="principle"><span class="number">01 · SOURCES</span><h3>출처부터 확인합니다</h3><p>공공기관, 연구자료, 원문 보도 등 주장을 확인할 수 있는 자료를 우선합니다.</p></article>
+      <article class="principle"><span class="number">02 · CONTEXT</span><h3>소식 너머의 맥락을 봅니다</h3><p>무엇이 확인됐고 무엇이 해석인지 구분해, 독자가 판단할 배경을 함께 설명합니다.</p></article>
+      <article class="principle"><span class="number">03 · MANY LENSES</span><h3>여러 분야를 연결합니다</h3><p>기술에만 머물지 않고 경제·사회·과학·문화·일상에서 실제로 이어지는 관점을 찾습니다.</p></article>
+    </section>
+    <section class="latest" aria-labelledby="latest-title">
+      <div class="section-head"><div><h2 id="latest-title">최근에 발행한 글</h2><p class="muted">글 목록은 블로그 게시글 색인에서 불러옵니다.</p></div><a class="text-link" href="/chanceblog/">전체 글과 검색 보기 →</a></div>
+      <div id="latest-posts" class="posts" aria-live="polite"><p class="empty">최근 글을 불러오는 중입니다.</p></div>
+      <p id="feed-status" class="status" role="status"></p>
+    </section>
+  </main>
+  <footer><div class="wrap foot"><span>© <span id="year"></span> Chance_Blog · AI-assisted drafting is disclosed in the editorial policy.</span><nav class="footlinks" aria-label="하단 메뉴"><a href="/chanceblog/about/">소개</a><a href="/chanceblog/privacy/">개인정보처리방침</a><a href="/chanceblog/contact/">문의</a><a href="https://github.com/shine88pc/chanceblog">GitHub</a></nav></div></footer>
+  <script>
+    document.getElementById('year').textContent = String(new Date().getFullYear());
+    const list = document.getElementById('latest-posts');
+    const status = document.getElementById('feed-status');
+    fetch('/chanceblog/posts.json', { cache: 'no-store' })
+      .then(response => { if (!response.ok) throw new Error('글 목록을 가져오지 못했습니다.'); return response.json(); })
+      .then(posts => {
+        const published = Array.isArray(posts) ? posts.filter(post => post.url && post.title).slice(0, 6) : [];
+        if (!published.length) throw new Error('표시할 게시글이 없습니다.');
+        list.replaceChildren(...published.map(post => {
+          const link = document.createElement('a');
+          link.className = 'post';
+          link.href = post.url;
+          const meta = document.createElement('span');
+          meta.className = 'post-meta';
+          meta.textContent = [post.category, post.lang && post.lang.toUpperCase(), post.date].filter(Boolean).join(' · ');
+          const title = document.createElement('h3');
+          title.textContent = post.title;
+          const summary = document.createElement('p');
+          summary.textContent = post.previewText || post.description || '출처와 맥락을 확인하며 읽어보세요.';
+          link.append(meta, title, summary);
+          return link;
+        }));
+      })
+      .catch(() => {
+        list.replaceChildren();
+        const fallback = document.createElement('p');
+        fallback.className = 'empty';
+        fallback.textContent = '최근 글 목록을 불러오지 못했습니다. 블로그에서 전체 글을 확인해 주세요.';
+        list.append(fallback);
+        status.textContent = '글 목록 연결을 확인하는 중입니다.';
+      });
+  </script>
+</body>
+</html>
